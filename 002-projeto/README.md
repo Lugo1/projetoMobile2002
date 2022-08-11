@@ -1,2 +1,2 @@
 # projetoMobile2002
-primeira aula de Node.js
+segunda aula de Node.js
