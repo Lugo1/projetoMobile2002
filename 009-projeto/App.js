@@ -1,43 +1,34 @@
 import React, {Component} from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 
-class App extends Component {
-  state = {
-    count: 0
-  }
-  onPress = () => {
-  this.setState({
-    count: this.state.count + 1
-  })
- }
- render() {
+export default function App() {
   return (
-    <View style={styles.container}>
-     <TouchableOpacity     style={styles.button}     onPress={this.onPress}     >
-      <Text>Click me</Text>
-     </TouchableOpacity>
-     <View>
-      <Text>
-       You clicked { this.state.count } times
-      </Text>
-     </View>
-   </View>
-    )
-  } 
+    <View style={styles.container1}>
+      <Text>Visão inicial</Text>
+      <View style={styles.container2}>
+       <Text>Primeiro</Text>
+        <View style={styles.container3}>
+          <Text>Segundo</Text>
+      </View>
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  container1: {
+    backgroundColor: 'steelblue',
+    margin: 15,
     justifyContent: 'center',
-    alignItems: 'center',
-   },
-   button: {
-     alignItems: 'center',
-     backgroundColor: '#DDDDDD',
-     padding: 10,
-     marginBottom: 10
+    textAlign: 'center',
+  },
+  container2: {
+    backgroundColor: 'peru',
+    margin: 10,
+  },
+  container3: {
+    backgroundColor: 'gray',
+    margin: 5,
   }
-})
-
-export default App;
+});
